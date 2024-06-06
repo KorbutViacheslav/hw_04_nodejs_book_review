@@ -3,6 +3,10 @@
 /.pnp
 .pnp.js
 
+#myhelperclasses
+rougCopy.ts
+helperInstall.txt
+
 # testing
 /coverage
 
