@@ -14,3 +14,5 @@ npm install mongoose
 npm i -D @types/mongoose
 
 npm install axios @types/axios
+
+npm install express-validator
