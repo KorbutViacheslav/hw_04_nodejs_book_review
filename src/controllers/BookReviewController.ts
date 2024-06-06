@@ -23,7 +23,7 @@ export const createReview = async (req: Request, res: Response) => {
     const review = await BookReview.create({ bookId, message });
     return res.status(201).json(review);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return res.sendStatus(400);
   }
 };
@@ -67,7 +67,7 @@ export const getReviewCounts = async (req: Request, res: Response) => {
 
     return res.status(200).json(counts);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return res.sendStatus(400);
   }
 };
