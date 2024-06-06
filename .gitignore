@@ -6,6 +6,7 @@
 #myhelperclasses
 rougCopy.ts
 helperInstall.txt
+node_modules/
 
 # testing
 /coverage
