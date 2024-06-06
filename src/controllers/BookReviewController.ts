@@ -1,8 +1,8 @@
-import express, { Request, Response } from "express";
+import { Request, Response } from "express";
 import axios from "axios";
 import { validationResult } from "express-validator";
 
-import BookReview, { IBookReview } from "../models/BookReview";
+import BookReview from "../models/BookReview";
 
 export const createReview = async (req: Request, res: Response) => {
   const errors = validationResult(req);
@@ -13,8 +13,9 @@ export const createReview = async (req: Request, res: Response) => {
   const { bookId, message } = req.body;
 
   try {
+    const bookServiceUrl = process.env.BOOK_SERVICE_URL;
     const bookResponse = await axios.get(
-      `http://localhost:8080/api/book/${bookId}`
+      `${bookServiceUrl}/api/book/${bookId}`
     );
     if (bookResponse.status !== 200) {
       return res.status(400).json({ error: "Invalid book ID" });

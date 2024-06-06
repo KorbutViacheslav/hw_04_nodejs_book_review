@@ -16,3 +16,7 @@ npm i -D @types/mongoose
 npm install axios @types/axios
 
 npm install express-validator
+
+npm install dotenv
+
+npm install supertest jest @types/jest ts-jest --save-dev (for tests)

@@ -6,6 +6,9 @@ import compression from "compression";
 import cors from "cors";
 import mongoose from "mongoose";
 import index from "./routers/index";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 
@@ -20,8 +23,7 @@ server.listen(8081, () => {
   console.log("Server running on http://localhost:8081/");
 });
 
-const MONGO_URL =
-  "mongodb+srv://korbutjava:korbutjava@cluster0.wtqg6as.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const MONGO_URL = process.env.MONGO_URL;
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGO_URL);

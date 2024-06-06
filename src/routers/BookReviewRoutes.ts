@@ -4,7 +4,7 @@ import {
   getReviews,
   getReviewCounts,
 } from "../controllers/BookReviewController";
-import { body, query, validationResult } from "express-validator";
+import { body, query } from "express-validator";
 
 export default (router: Router): void => {
   router.post(
